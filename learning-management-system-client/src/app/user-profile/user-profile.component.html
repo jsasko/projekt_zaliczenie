@@ -1,0 +1,65 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Edit Profile</h4>
+                        <p class="card-category">Complete your profile</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="form.username" name="username" matInput
+                                               placeholder="Username">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="form.email" name="email" matInput placeholder="E-mail"
+                                               type="email">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="form.oldPassword" name="oldPassword" matInput
+                                               placeholder="Old password" type="password">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="form.newPassword" name="password" matInput
+                                               placeholder="Password" type="password">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="form.repeatedPassword" name="repeatedPassword" matInput
+                                               placeholder="Repeat password" type="password">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                                    (click)="onSubmit()">Update Profile
+                            </button>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                                    (click)="onDelete()">Delete account
+                            </button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

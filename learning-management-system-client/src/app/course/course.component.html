@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Course</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="course.title" name="title" matInput
+                                               placeholder="Title">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                    <textarea [(ngModel)]="course.description" name="description" matInput placeholder="Description"
+                              type="text"> </textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-form-field class="example-full-width">
+                                        <input [(ngModel)]="course.price" name="price" matInput placeholder="Price"
+                                               type="number">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <mat-select placeholder="Level" [(value)]="course.level">
+                                        <mat-option [(value)]="course.level">{{course.level}}</mat-option>
+                                        <mat-option *ngFor="let level of levels"
+                                                    [value]="course.level">{{level}}</mat-option>
+                                    </mat-select>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
